@@ -1,0 +1,91 @@
+$darker-background: #1d2625;
+$background: #282a36;
+$current-line: #44475a;
+$foreground: #f8f8f2;
+$text: rgba(255, 255, 255, 0.6);
+$minor-text: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+
+.nav-bar {
+	width: 249px;
+	height: 100%;
+	background-color: $darker-background;
+	color: $text;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	flex-shrink: 0;
+	border-right: 1px $current-line solid;
+
+	.profile-picture {
+		border-bottom: 1px $current-line solid;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 0;
+
+		.profile-picture-container {
+			height: 200px;
+			width: 200px;
+			background-color: $foreground;
+			border-radius: 100%;
+			display: flex;
+			align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+
+
+			&:hover {
+				background-color: $red;
+			}
+
+			img {
+                border-radius: 100%;
+
+                width: 95%; 
+                height: 95%; 
+
+				&:hover {
+					transform: scale(1.115);
+					transition: transform 4s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+				}
+			}
+		}
+	}
+
+	.options {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		.option {
+			text-decoration: none;
+			color: $text;
+			padding: 7px 0;
+			font-weight: 700;
+			font-size: 1.3rem;
+			letter-spacing: 1px;
+
+			&:hover {
+				background-color: $background;
+				color: $foreground;
+			}
+		}
+	}
+
+	.footer {
+		border-top: 1px $current-line solid;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 15px 0;
+	}
+}

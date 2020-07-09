@@ -1,0 +1,46 @@
+$darker-background: #1d2625;
+$background: #282a36;
+$current-line: #44475a;
+$foreground: #f8f8f2;
+$text: rgba(255, 255, 255, .6);
+$minor-text: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+
+.homepage {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+ 
+    
+    h1 {
+        color: $foreground;
+        font-weight: 700;
+        font-size: 3.3rem;
+        line-height: 4rem;
+        padding: 0 50px;
+    }
+
+    span {
+        color: $purple;
+        font-weight: 600;
+    }
+
+    p {
+        color: $text;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        margin: 15px 0;
+        padding: 0 60px;
+    }
+}
