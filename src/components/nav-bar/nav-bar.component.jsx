@@ -1,27 +1,38 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import './nav-bar.styles.scss';
-import ProfilePicture from './profile-picture.jpg'
 
-const NavBar = () => (
-	<div className="nav-bar">
-        <div className="profile-picture">
-            <Link className="profile-picture-container" to='/'>
-                <img src={ProfilePicture} alt="Dev on a scooter" width='180px' height='180px' />
-            </Link>
-        </div>
-		<div className="options">
-            <Link className="option" to='/'>HOME</Link>
-            <Link className="option" to='/about'>ABOUT</Link>
-            <Link className="option" to='/portfolio'>PORTFOLIO</Link>
-            <Link className="option" to='/blog'>BLOG</Link>
-            <Link className="option" to='/contact'>CONTACT</Link>
-        </div>
-		<div className="footer">
-			<p>&copy; 2020 Lev-TS</p>
+const NavBar = ({ location, active }) => {
+	const hilight = path => `${location.pathname === `${path}` ? 'selected-option' : 'option'}`;
+	const transform = {
+		transform: `${!active ? 'scale(0)' : 'none'}`,
+		position: `${!active ? 'absolute' : 'static'}`,
+	};
+
+	return (
+		<div className="nav-bar" style={transform}>
+			<div className="profile-picture">
+				<Link className="outer-box" to="/">
+					<div className="inner-box">
+						<div className="background-image" />
+					</div>
+				</Link>
+			</div>
+			<div className="options">
+                <Link className={hilight('/')} to="/">HOME</Link>
+				<Link className={hilight('/about')} to="/about">ABOUT</Link>
+				<Link className={hilight('/resume')} to="/resume">RESUME</Link>
+                <Link className={hilight('/portfolio')} to="/portfolio">PORTFOLIO</Link>
+                <Link className={hilight('/blog')} to="/blog">BLOG</Link>
+                <Link className={hilight('/contact')} to="/contact">CONTACT</Link>
+			</div>
+			<div className="footer">
+				<p>&copy; Lev-TS / 2020 </p>
+			</div>
 		</div>
-	</div>
-);
+	);
+};
 
-export default NavBar;
+export default withRouter(NavBar);
+

@@ -13,76 +13,102 @@ $red: #ff5555;
 $yellow: #f1fa8c;
 
 .nav-bar {
-	width: 249px;
+	width: 300px;
 	height: 100%;
 	background-color: $darker-background;
 	color: $text;
+	border-right: 1px $current-line solid;
+	flex-shrink: 0;
+	overflow: auto;
+
+	
 	display: flex;
 	flex-direction: column;
-	text-align: center;
-	flex-shrink: 0;
-	border-right: 1px $current-line solid;
+	align-items: center;
 
 	.profile-picture {
-		border-bottom: 1px $current-line solid;
+		width: 100%;
+		padding: 20px 0;
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 20px 0;
 
-		.profile-picture-container {
+		.outer-box {
 			height: 200px;
 			width: 200px;
 			background-color: $foreground;
 			border-radius: 100%;
-			display: flex;
-			align-items: center;
-            justify-content: center;
-            overflow: hidden;
+			padding: 5px;
+			
+			
+			.inner-box{
+				height: 100%;
+				width: 100%;
+				border-radius: 100%;
+				overflow: hidden;
 
+				.background-image {
+					height: 100%;
+					width: 100%;
+					border-radius: 100%;
+					background-image: url('./profile-picture.jpg');
+					background-position: center;
+					background-size: cover;
 
-
-			&:hover {
-				background-color: $red;
-			}
-
-			img {
-                border-radius: 100%;
-
-                width: 95%; 
-                height: 95%; 
-
-				&:hover {
-					transform: scale(1.115);
-					transition: transform 4s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+					&:hover {
+						transform: scale(1.1);
+						transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+					}
 				}
 			}
 		}
 	}
 
 	.options {
+		width: 100%;
+		min-height: 260px;
+		padding: 15px 0;
 		flex-grow: 1;
+		border-top: 1px $current-line solid;
+		border-bottom: 1px $current-line solid;
+		text-align: center;
+
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 
-		.option {
+		.selected-option {
 			text-decoration: none;
-			color: $text;
-			padding: 7px 0;
+			background-color: $green;
+			color: $darker-background;
+			padding: 10px 0;
 			font-weight: 700;
 			font-size: 1.3rem;
 			letter-spacing: 1px;
+			margin: 0 3px;
+		}
+
+		.option {
+			text-decoration: none;
+			color: $text;
+			padding: 10px 0;
+			font-weight: 700;
+			font-size: 1.3rem;
+			letter-spacing: 1px;
+			margin: 1px 3px;
 
 			&:hover {
-				background-color: $background;
-				color: $foreground;
+				background-color: $green;
+				opacity: .3;
+				color: $darker-background;
+				transition: background-color .6s ease-out;
 			}
 		}
 	}
 
 	.footer {
-		border-top: 1px $current-line solid;
+		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;

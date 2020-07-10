@@ -2,10 +2,15 @@
     font-family: 'Nunito', sans-serif;
     font-size: 15px;
     height: 100%;
-    display: flex;    
+    overflow: auto;
+    
+    display: flex;
+    flex-wrap: none;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, .6);
+.body {
+    height: 100%;
+    flex-grow: 1;
 }

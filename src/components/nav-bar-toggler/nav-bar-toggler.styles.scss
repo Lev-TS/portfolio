@@ -1,0 +1,59 @@
+$darker-background: #1d2625;
+$background: #282a36;
+$current-line: #44475a;
+$foreground: #f8f8f2;
+$text: rgba(255, 255, 255, 0.6);
+$minor-text: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+
+@mixin menu-icon {
+	position: absolute;
+	z-index: 100;
+	top: 10px;
+	outline: none;
+	border: none;
+	background-position: center;
+	background-size: cover;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.3);
+		transition: all .6s ease-out;
+	}
+}
+
+.nav-bar-toggler {
+	height: 100%;
+
+	.open-menu {
+		@include menu-icon();
+		background-image: url('../../assets/menu-icon.svg');
+		background-color: $background;
+        left: 15px;
+        height: 25px;
+        width: 25px;
+
+		&:hover {
+            background-image: url('../../assets/open-icon-hover.svg');
+		}
+	}
+
+	.close-menu {
+		@include menu-icon();
+		background-image: url('../../assets/close-icon.svg');
+		background-color: $darker-background;
+        left: 269px;
+        height: 15px;
+        width: 15px;
+
+		&:hover {
+			background-image: url('../../assets/close-icon-hover.svg');
+		}
+	}
+}
