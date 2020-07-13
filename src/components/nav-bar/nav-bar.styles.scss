@@ -12,22 +12,6 @@ $purple: #bd93f9;
 $red: #ff5555;
 $yellow: #f1fa8c;
 
-@mixin option-buttons {
-	text-decoration: none;
-	font-weight: 700;
-	font-size: 1.3rem;
-	letter-spacing: 1px;
-	padding: 10px 0;
-	margin: 1px 3px;
-}
-
-@mixin option-buttons-mobile {
-	font-size: 1.1rem;
-	letter-spacing: 1px;
-	padding: 7px 0;
-	margin: 1px 2px;
-}
-
 .nav-bar {
 	width: 300px;
 	height: 100%;
@@ -37,117 +21,15 @@ $yellow: #f1fa8c;
 	flex-shrink: 0;
 	overflow: auto;
 	z-index: 1;
+	transition: all 0.7s ease-out;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
-	.profile-picture {
-		width: 100%;
-		padding: 20px 0;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		.outer-box {
-			height: 200px;
-			width: 200px;
-			background-color: $foreground;
-			border-radius: 100%;
-			padding: 5px;
-
-			.inner-box {
-				height: 100%;
-				width: 100%;
-				border-radius: 100%;
-				overflow: hidden;
-
-				.background-image {
-					height: 100%;
-					width: 100%;
-					border-radius: 100%;
-					background-image: url('../../assets/profile-picture.jpg');
-					background-position: center;
-					background-size: cover;
-
-					&:hover {
-						transform: scale(1.1);
-						transition: transform 6s
-							cubic-bezier(0.25, 0.45, 0.45, 0.95);
-					}
-				}
-			}
-		}
-	}
-
-	.options {
-		width: 100%;
-		min-height: 260px;
-		padding: 15px 0;
-		flex-grow: 1;
-		border-top: 1px $current-line solid;
-		border-bottom: 1px $current-line solid;
-		text-align: center;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-		.selected-option {
-			@include option-buttons();
-			background-color: $green;
-			color: $darker-background;
-		}
-
-		.option {
-			@include option-buttons();
-			color: $text;
-
-			&:hover {
-				background-color: $green;
-				opacity: 0.3;
-				color: $darker-background;
-				transition: background-color 0.6s ease-out;
-			}
-		}
-	}
-
-	.footer {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 15px 0;
-	}
 }
 
 @media only screen and (max-width: 1024px) {
 	.nav-bar {
 		width: 230px;
-
-		.profile-picture {
-			
-			.outer-box {
-				width: 150px;
-				height: 150px;
-			}
-		}
-	}
-}
-
-@media only screen and (max-width: 800px) {
-	.nav-bar {
-
-		.options {
-
-			.selected-option {
-				@include option-buttons-mobile();
-			}
-
-			.option {
-				@include option-buttons-mobile();
-			}
-		}
 	}
 }

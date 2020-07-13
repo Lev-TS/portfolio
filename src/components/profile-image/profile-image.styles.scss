@@ -1,0 +1,78 @@
+$darker-background: #1d2625;
+$background: #282a36;
+$current-line: #44475a;
+$foreground: #f8f8f2;
+$text: rgba(255, 255, 255, 0.6);
+$minor-text: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+
+.profile-image {
+	height: 400px;
+	width: 400px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.outer-box {
+		height: 100%;
+		width: 100%;
+		background-color: $foreground;
+		padding: 5px;
+
+		.inner-box {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+
+			.background-image {
+				height: 100%;
+				width: 100%;
+				background-image: url('../../assets/profile-picture.jpg');
+				background-position: center;
+				background-size: cover;
+				transition: transform 6s
+				cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1550px) {
+	.profile-image {
+		width: 400px;
+		height: 400px;
+		margin: 40px auto;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.profile-image {
+		width: 250px;
+		height: 250px;
+
+		.outer-box {
+	
+			.inner-box {
+	
+				.background-image {
+	
+					&:hover {
+						transform: none;
+					}
+				}
+			}
+		}
+
+	}
+}

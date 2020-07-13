@@ -8,12 +8,11 @@ const NavBarToggler = ({ active, handleOpenMenu, handleCloseMenu}) => {
 			<button
 				className="open-menu"
 				onClick={handleOpenMenu}
-				style={{ display: `${active ? 'none' : 'inline-block'}` }}
 			></button>
 			<button
 				className="close-menu"
 				onClick={handleCloseMenu}
-				style={{ display: `${!active ? 'none' : 'inline-block'}` }}
+				style={{ transform: `${!active ? 'translate(-300px)' : 'none'}` }}
 			></button>
 		</div>
 	);

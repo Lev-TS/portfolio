@@ -1,0 +1,116 @@
+$darker-background: #1d2625;
+$background: #282a36;
+$current-line: #44475a;
+$foreground: #f8f8f2;
+$text: rgba(255, 255, 255, 0.6);
+$minor-text: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+
+@mixin icons {
+	background: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.page-header {
+	width: 100%;
+	padding-bottom: 10px;
+	margin-bottom: 44px;
+	border-bottom: 2px $red solid;
+
+	display: flex;
+
+	h1 {
+		width: 100%;
+		color: $foreground;
+		vertical-align: middle;
+		line-height: 60px;
+		font-size: 50px;
+		font-weight: 700;
+		text-transform: uppercase;
+		flex-grow: 1;
+	}
+
+	a {
+		width: 60px;
+		height: 60px;
+		margin-left: 5px;
+		flex-shrink: 0;
+		transition: all 0.3s linear;
+	}
+
+	.github {
+		@include icons();
+		background-image: url(../../assets/github-icon.png);
+
+		&:hover {
+			background-image: url(../../assets/github-icon-hover.png);
+		}
+	}
+
+	.linkedin {
+		@include icons();
+		background-image: url(../../assets/linkedin-icon.png);
+
+		&:hover {
+			background-image: url(../../assets/linkedin-icon-hover.png);
+		}
+	}
+
+	.twitter {
+		@include icons();
+		background-image: url(../../assets/twitter-icon.png);
+
+		&:hover {
+			background-image: url(../../assets/twitter-icon-hover.png);
+		}
+	}
+}
+
+@media only screen and (max-width: 1550px) {
+	.page-header {
+        margin: 0px;
+
+        h1 {
+            font-size: 42px;
+            line-height: 40px;
+		}
+
+		a {
+			height: 40px;
+            width: 40px;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.page-header {
+		
+		.fixed-head {
+			position: fixed;
+			background-color: $background;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 44px;
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+		}
+
+
+        h1 {
+            font-size: 25px;
+            line-height: 30px;
+		}
+
+		a {
+			height: 30px;
+            width: 30px;
+		}
+	}
+}

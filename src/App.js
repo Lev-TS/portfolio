@@ -30,7 +30,7 @@ class App extends React.Component {
 		this.setState({ active: true });
 		window.innerWidth <= 1024 &&
 			this.setState({
-				BodyStyle: { backgroundColor: 'black', opacity: '0.1' },
+				BodyStyle: { backgroundColor: 'black', opacity: '0.1'},
 			});
 	};
 
@@ -77,7 +77,7 @@ class App extends React.Component {
 		const { active, BodyStyle } = this.state;
 
 		return (
-			<div className="App" onResize={this.handleResize}>
+			<div className="App">
 				<NavBarToggler
 					handleOpenMenu={this.handleOpenMenu}
 					handleCloseMenu={this.handleCloseMenu}
