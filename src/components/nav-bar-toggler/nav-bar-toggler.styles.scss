@@ -43,7 +43,7 @@ $yellow: #f1fa8c;
 		@include menu-icon();
 		background-image: url('../../assets/close-icon.svg');
 		background-color: $darker-background;
-        left: 269px;
+        left: 266px;
         height: 15px;
 		width: 15px;
 		transition: transform 0.7s ease-out;
@@ -54,7 +54,7 @@ $yellow: #f1fa8c;
 	.nav-bar-toggler  {
 
 		.close-menu {
-			left: 202px;
+			left: 199px;
 		}
 	}
 }

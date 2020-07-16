@@ -4,7 +4,7 @@ import './page-header.styles.scss';
 
 const PageHeader = ({ title }) => (
 	<div className="page-header">
-        <div className="fixed-head"/>
+        
         <h1>{title}</h1>
 		<a
 			className="github"

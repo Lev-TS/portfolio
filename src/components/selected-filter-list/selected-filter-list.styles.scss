@@ -1,0 +1,54 @@
+$darker-background: #1d2625;
+$background: #282a36;
+$current-line: #44475a;
+$foreground: #f8f8f2;
+$text: rgba(255, 255, 255, 0.6);
+$minor-text: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+
+.selected-filter-list {
+	border-radius: 2px;
+	min-height: 70px;
+	margin: 0 auto;
+	margin-bottom: 70px;
+	flex-shrink: 0;
+	width: 100%;
+    min-height: 70px;
+	background-color: $darker-background;
+	border: 1px $foreground solid;
+
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.selected-filter-container{
+	display: flex;
+	flex-wrap: wrap;
+	text-decoration: underline;
+	margin: 20px 20px 5px 20px;
+}
+
+.clear {
+	border: none;
+	height: 50px;
+	background-color: inherit;
+	color: $foreground;
+	font-size: 12px;
+	font-weight: 700;
+	cursor: pointer;
+	padding: 3px 20px;
+	border-left: 1px $foreground solid;
+	outline: none;
+}
+
+.clear:hover {
+	text-decoration: underline;
+}

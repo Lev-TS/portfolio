@@ -2,20 +2,35 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import './nav-bar-options.styles.scss';
+import DATA from './nav-bar-options.data';
 
-const NavBarOptions = ({ location }) => {
-    const highlight = path => `${location.pathname === `${path}` ? 'selected-option' : 'option'}`;
-    
-    return (
-        <div className="options">
-            <Link className={highlight('/')} to="/">HOME</Link>
-			<Link className={highlight('/about')} to="/about">ABOUT</Link>
-			<Link className={highlight('/resume')} to="/resume">RESUME</Link>
-            <Link className={highlight('/portfolio')} to="/portfolio">PORTFOLIO</Link>
-            <Link className={highlight('/blog')} to="/blog">BLOG</Link>
-            <Link className={highlight('/contact')} to="/contact">CONTACT</Link>
-		</div>
-    )
+class NavBarOptions extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			pages: DATA,
+		};
+	}
+
+	render() {
+		const highlight = (path) =>`${this.props.location.pathname === `${path}` ? 'selected-option' : 'option'}`;
+
+		return (
+			<div className="options">
+				{this.state.pages.map((page) => (
+					<Link
+						key={page.id}
+						className={highlight(`${page.path}`)}
+                        to={page.path}
+                        style={{textTransform: 'uppercase'}}
+                    >
+                        {page.title}
+                    </Link>
+				))}
+			</div>
+		);
+	}
 }
 
 export default withRouter(NavBarOptions);

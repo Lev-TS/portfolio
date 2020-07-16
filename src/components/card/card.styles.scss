@@ -1,0 +1,131 @@
+$darker-background: #1d2625;
+$background: #282a36;
+$current-line: #44475a;
+$foreground: #f8f8f2;
+$text: rgba(255, 255, 255, 0.6);
+$minor-text: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+
+.project-card {
+	width: 325px;
+	color: $foreground;
+	margin-bottom: 30px;
+	flex-shrink: 0;
+	
+	.project-image-container {
+		height: 250px;
+		width: 100%;
+		padding: 9% 6%;
+		background-color: $current-line;
+		border: 1px $current-line solid;
+		border-radius: 6px 6px 0 0;	
+		
+		
+		.project-image {
+			height: 100%;
+			width: 100%;
+			margin: auto;
+			background-position: center;
+			background-size: cover;
+			background-repeat: none;
+			border-radius: 2px;
+			box-shadow: 0 0px 15px 8px $darker-background;
+		}
+	}
+	
+	.project-info-container {
+		padding: 20px;
+		background-color: $foreground;
+		border-radius: 0 0 6px 6px;	
+		
+		
+		
+		.project-title {
+			color: $darker-background;
+			font-weight: 700;
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		
+		.info-list-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 200px;
+			font-size: 12px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			
+			li {
+				display: inline-block;
+				color: $current-line;
+			}
+			
+			.bullet{
+				height: 3px;
+				width: 3px;
+				border-radius: 100%;
+				background-color: $current-line;
+			}
+		}
+
+		.project-description {
+			min-height: 200px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 1.6;
+			margin-bottom: 20px;;
+			color: $minor-text;
+			padding-bottom: 20px;
+			border-bottom: 1px $current-line solid;
+		}
+
+		.card-button-container {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 30px;
+
+
+			a {
+				width: 100px;
+				display: inline-block;
+				border: 2px $darker-background solid;
+				color: $darker-background;
+				border-radius: 4px;
+				text-align: center;
+				text-decoration: none;
+				font-weight: 600;
+				padding: 5px;
+				font-size: 15px;
+				transition: all .3s ease-in-out;
+				box-shadow: 0 0px 10px 0px $darker-background;
+		
+				&:hover {
+					color: $foreground;
+					background-color: $darker-background;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1240px) {
+	.project-card {
+		width: 40%;
+		min-width: 325px;
+	}
+}
+
+@media only screen and (max-width: 840px) {
+	.project-card {
+		width: 60%;
+		min-width: 325px;
+		margin-bottom: 60px;
+	}
+}

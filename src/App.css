@@ -2,7 +2,7 @@
     font-family: 'Nunito', sans-serif;
     font-size: 15px;
     height: 100%;
-    
+
     display: flex;
     flex-wrap: none;
     align-items: center;
@@ -13,13 +13,27 @@
     height: 100%;
     width: 100%;
     flex-grow: 1;
-    transition: all 0.7s;
     overflow: auto;
+    transition: all 0.7s;
 }
 
 @media only screen and (max-width: 1024px) {
-	.body  {
+    .body {
         position: absolute;
+        top: 0;
+        left: 0;
         z-index: 0;
-	}
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .body .fixed-header {
+        height: 44px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #282a36;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+    }
 }

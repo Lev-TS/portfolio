@@ -11,7 +11,6 @@ import NavBar from './components/nav-bar/nav-bar.component';
 // Page components
 import HomePage from './pages/homepage/homepage.component';
 import About from './pages/about/about.component';
-import Resume from './pages/resume/resume.component';
 import Portfolio from './pages/portfolio/portfolio.component';
 import Blog from './pages/blog/blog.component';
 import Contact from './pages/contact/contact.component';
@@ -85,6 +84,7 @@ class App extends React.Component {
 				/>
 				<NavBar active={active} />
 				<div className="body" style={BodyStyle}>
+					<div className="fixed-header"/>
 					<Switch>
 						<Route
 							exact
@@ -97,7 +97,6 @@ class App extends React.Component {
 							)}
 						/>
 						<Route path="/about" component={About} />
-						<Route path="/resume" component={Resume} />
 						<Route path="/portfolio" component={Portfolio} />
 						<Route path="/blog" component={Blog} />
 						<Route path="/contact" component={Contact} />

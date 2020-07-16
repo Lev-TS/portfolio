@@ -16,7 +16,7 @@ $yellow: #f1fa8c;
 	width: 80%;
 	max-width: 1024px;
 	height: 100%;
-	margin: 0 auto;
+	margin: 50px auto;
 
 	display: flex;
 	flex-direction: column;
@@ -37,14 +37,24 @@ $yellow: #f1fa8c;
 
 			.long-bio {
 				width: 550px;
+				height: 100%;
 				color: $text;
 				text-align: justify;
-				font-size: 1.19rem;
+				font-size: 1.33rem;
 				line-height: 1.2em;
+
+			
+				span {
+					display: block;
+
+					&:first-child {
+						margin-bottom: 31px;
+					}
+				}
 			}
 
 			a {
-				background: $green;
+				background-color: $foreground;
 				border-radius: 4px;
 				text-align: center;
 				text-decoration: none;
@@ -71,6 +81,7 @@ $yellow: #f1fa8c;
 		margin: 50px auto;
 		justify-content: flex-start;
 
+
 		.about-outer-container {
 			margin: 0 auto;
 			flex-direction: column;
@@ -81,11 +92,14 @@ $yellow: #f1fa8c;
 				.long-bio {
 					margin: 0 auto;
 					width: 544px;
-				}
+					margin-bottom: 50px;
 
-				a {
-					margin: 50px 0;
-					align-self: center;
+					span {
+	
+						&:first-child {
+							margin-bottom: 20px;
+						}
+					}
 				}
 			}
 		}

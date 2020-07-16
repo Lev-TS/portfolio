@@ -1,0 +1,19 @@
+.card-list {
+	width: 100%;
+	text-align: center;
+	
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+	&::after {
+		content: "";
+		width: 325px;
+	}
+}
+
+@media only screen and (max-width: 840px) {
+	.card-list  {
+		justify-content: center;
+	}
+}
