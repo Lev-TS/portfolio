@@ -5,13 +5,14 @@ import PORTFOLIO_DATA from './portfolio.data';
 
 import SelectedFilterList from '../../components/selected-filter-list/selected-filter-list.component';
 import CardList from '../../components/card-list/card-list.component';
+import PageHeader from '../../components/page-header/page-header.component';
 
 class Portfolio extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			projects: PORTFOLIO_DATA,
-			filters: []
+			filters: [],
 		};
 	}
 
@@ -46,24 +47,33 @@ class Portfolio extends React.Component {
 		let { projects, filters } = this.state;
 
 		const filterProjects = () => {
-			filters.forEach(filter=>{
-				projects.forEach(listing => {
+			filters.forEach((filter) => {
+				projects.forEach((listing) => {
 					if (filter === listing.stack) {
-						projects = projects.filter(item => item.stack === filter)
+						projects = projects.filter(
+							(item) => item.stack === filter
+						);
 					} else if (filter === listing.type) {
-						projects = projects.filter(item => item.type === filter)
+						projects = projects.filter(
+							(item) => item.type === filter
+						);
 					} else if (listing.languages.includes(filter)) {
-						projects = projects.filter(item => item.languages.includes(filter))
+						projects = projects.filter((item) =>
+							item.languages.includes(filter)
+						);
 					} else if (listing.tools.includes(filter)) {
-						projects = projects.filter(item => item.tools.includes(filter))
+						projects = projects.filter((item) =>
+							item.tools.includes(filter)
+						);
 					}
-				})
+				});
 			});
 			return projects;
-		}
+		};
 
 		return (
 			<div className="portfolio">
+				<PageHeader title="Projects" />
 				<SelectedFilterList
 					filters={filters}
 					handleRemoveFilter={this.handleRemoveFilter}

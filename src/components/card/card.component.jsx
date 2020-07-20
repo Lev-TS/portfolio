@@ -35,6 +35,7 @@ const Card = ({ project, handleAddFilter }) => (
 					href={project.liveUrl}
 					rel="noopener noreferrer"
 					target="_blank"
+					style = {{display: `${project.liveUrl === 'n/a' ? 'none' : 'inline-block'}`}}
 				>
 					Live
 				</a>
@@ -42,6 +43,7 @@ const Card = ({ project, handleAddFilter }) => (
 					href={project.sourceUrl}
 					rel="noopener noreferrer"
 					target="_blank"
+					style = {{display: `inline-block`}}
 				>
 					Source
 				</a>

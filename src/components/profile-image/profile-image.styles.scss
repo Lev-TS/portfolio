@@ -15,64 +15,35 @@ $yellow: #f1fa8c;
 .profile-image {
 	height: 400px;
 	width: 400px;
+	border: 10px $foreground solid;
+	display: inline-block;
+	overflow: hidden;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	.outer-box {
+	.background-image {
 		height: 100%;
 		width: 100%;
-		background-color: $foreground;
-		padding: 5px;
+		background-image: url('../../assets/profile-picture.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: none;
+		transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
-		.inner-box {
-			height: 100%;
-			width: 100%;
-			overflow: hidden;
-
-			.background-image {
-				height: 100%;
-				width: 100%;
-				background-image: url('../../assets/profile-picture.jpg');
-				background-position: center;
-				background-size: cover;
-				transition: transform 6s
-				cubic-bezier(0.25, 0.45, 0.45, 0.95);
-
-				&:hover {
-					transform: scale(1.1);
-				}
-			}
+		&:hover {
+			transform: scale(1.1);
 		}
 	}
 }
 
 @media only screen and (max-width: 1550px) {
 	.profile-image {
-		width: 400px;
-		height: 400px;
-		margin: 40px auto;
+		margin-bottom: 50px;
 	}
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
 	.profile-image {
-		width: 250px;
-		height: 250px;
-
-		.outer-box {
-	
-			.inner-box {
-	
-				.background-image {
-	
-					&:hover {
-						transform: none;
-					}
-				}
-			}
-		}
-
+		width: 305px;
+		height: 305px;
+		border-width: 5px;
 	}
 }

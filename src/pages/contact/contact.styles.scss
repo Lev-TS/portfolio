@@ -13,17 +13,30 @@ $red: #ff5555;
 $yellow: #f1fa8c;
 
 .contact {
-    height: 100%;
-    width: 100%;
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+    padding: 3% 5%;
 
-    display: flex;
-    align-items: center;
-    justify-self: center;
-
+    border: 1px $red solid;
+    border-radius: 2px;
+    background-color: $darker-background;
+    color: $text;
+    box-shadow: 0 0px 15px 5px $darker-background;
 
     h1 {
-        font-size: 3rem;
-        color: $orange;
-        margin: auto;
+        font-size: 45px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 30px;
+        color: $red;
+    }
+    
+    p {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 50px;
+        line-height: 1.3;
     }
 }

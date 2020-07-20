@@ -6,14 +6,14 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 	
-	&::after {
-		content: "";
-		width: 325px;
-	}
+	// &::after {
+	// 	content: "";
+	// 	width: 325px;
+	// }
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 1550px) {
 	.card-list  {
-		justify-content: center;
+		justify-content: space-around;
 	}
 }

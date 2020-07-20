@@ -15,7 +15,7 @@ $yellow: #f1fa8c;
 .project-card {
 	width: 325px;
 	color: $foreground;
-	margin-bottom: 30px;
+	margin-top: 30px;
 	flex-shrink: 0;
 	
 	.project-image-container {
@@ -87,21 +87,18 @@ $yellow: #f1fa8c;
 		}
 
 		.card-button-container {
-			display: flex;
-			justify-content: space-between;
-			padding: 0 30px;
+			text-align: center;
 
 
 			a {
 				width: 100px;
-				display: inline-block;
 				border: 2px $darker-background solid;
 				color: $darker-background;
 				border-radius: 4px;
-				text-align: center;
 				text-decoration: none;
 				font-weight: 600;
 				padding: 5px;
+				margin: 0 10px;
 				font-size: 15px;
 				transition: all .3s ease-in-out;
 				box-shadow: 0 0px 10px 0px $darker-background;
@@ -115,17 +112,15 @@ $yellow: #f1fa8c;
 	}
 }
 
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 1550px) {
 	.project-card {
-		width: 40%;
-		min-width: 325px;
+		margin: 30px 5px 0;
 	}
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 872px) {
 	.project-card {
 		width: 60%;
 		min-width: 325px;
-		margin-bottom: 60px;
 	}
 }

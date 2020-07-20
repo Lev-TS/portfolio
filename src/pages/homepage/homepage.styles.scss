@@ -14,6 +14,7 @@ $yellow: #f1fa8c;
 
 .homepage {
     height: 100%;
+    margin: auto;
     text-align: center;
 
     display: flex;
@@ -21,8 +22,6 @@ $yellow: #f1fa8c;
     align-items: center;
     justify-content: center;
 
- 
-    
     h1 {
         color: $foreground;
         font-weight: 600;

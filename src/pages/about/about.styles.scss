@@ -15,60 +15,30 @@ $yellow: #f1fa8c;
 .about {
 	width: 80%;
 	max-width: 1024px;
-	height: 100%;
-	margin: 50px auto;
+	margin: auto;
 
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
 
 	.about-outer-container {
-		padding: 0 4px;
-		width: 100%;
-
+		
 		display: flex;
 		justify-content: space-between;
 
-		.about-inner-container {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
+		.long-bio {
+			width: 550px;
+			color: $text;
+			text-align: justify;
+			font-size: 1.33rem;
+			line-height: 1.2;
+			display: inline-block;
 
-			.long-bio {
-				width: 550px;
-				height: 100%;
-				color: $text;
-				text-align: justify;
-				font-size: 1.33rem;
-				line-height: 1.2em;
+			span {
+				display: block;
 
-			
-				span {
-					display: block;
-
-					&:first-child {
-						margin-bottom: 31px;
-					}
-				}
-			}
-
-			a {
-				background-color: $foreground;
-				border-radius: 4px;
-				text-align: center;
-				text-decoration: none;
-				color: $background;
-				font-weight: 600;
-				padding: 10px 18px;
-				font-size: 18px;
-				border: 0;
-				align-self: flex-end;
-                transition: all 0.3s ease-in-out;
-
-				&:hover {
-					cursor: pointer;
-					opacity: 0.6;
+				&:first-child {
+					margin-bottom: 31px;
 				}
 			}
 		}
@@ -78,27 +48,21 @@ $yellow: #f1fa8c;
 @media only screen and (max-width: 1550px) {
 	.about {
 		width: 550px;
-		margin: 50px auto;
 		justify-content: flex-start;
 
-
 		.about-outer-container {
-			margin: 0 auto;
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;
 
-			.about-inner-container {
-				.long-bio {
-					margin: 0 auto;
-					width: 544px;
-					margin-bottom: 50px;
+			.long-bio {
+				margin: 0 auto;
+				width: 544px;
+				line-height: 1.6;
 
-					span {
-	
-						&:first-child {
-							margin-bottom: 20px;
-						}
+				span {
+					&:first-child {
+						margin-bottom: 20px;
 					}
 				}
 			}
@@ -106,18 +70,17 @@ $yellow: #f1fa8c;
 	}
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
 	.about {
 		width: 310px;
-		margin: 94px auto 50px auto;
 
 		.about-outer-container {
 
-			.about-inner-container {
-				.long-bio {
-					width: 310px;
-					font-size: 14px;
-				}
+			.long-bio {
+				width: 310px;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 1.6;
 			}
 		}
 	}
