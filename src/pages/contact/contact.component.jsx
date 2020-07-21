@@ -33,7 +33,7 @@ class Contact extends React.Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 
-		fetch('/contact/send', {
+		fetch('/api/contact/send', {
 			method: 'POST',
 			body: JSON.stringify(this.state),
 			headers: {
@@ -46,7 +46,6 @@ class Contact extends React.Component {
 				alert('Message Sent.');
 				this.resetState();
 			} else if (response.status === 500) {
-				console.log(response.error);
 				alert(
 					'Message failed to send. Please try again later or write me directly at levantsu@gmail.com'
 				);
