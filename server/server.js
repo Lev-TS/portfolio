@@ -1,7 +1,19 @@
 const express = require('express');
-
-const contactRouter = express.Router();
+const path = require('path');
 const cors = require('cors');
+
+const app = express();
+const contactRouter = express.Router();
+app.use(express.json());
+
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, '/build')));
+
+
+// Serve requests for sending messages
+app.use(cors());
+app.use('/contact', contactRouter);
+
 
 const nodemailer = require('nodemailer');
 const credentials = require('./config');
@@ -44,8 +56,11 @@ contactRouter.post('/send', (req, res, next) => {
 	});
 });
 
-const app = express();
-app.use(cors());
-app.use(express.json());
-app.use('/contact', contactRouter);
-app.listen(3002);
+// Handles any requests that don't match the one above
+app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/build/index.html'));
+});
+
+
+const port = process.env.PORT || 3001;
+app.listen(port);
