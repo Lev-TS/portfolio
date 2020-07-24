@@ -45,7 +45,7 @@ class App extends React.Component {
 	};
 
 	// Update inactive body style on window resize
-	updateInactiveBodyStyle() {
+	updateInactiveBodyStyle = () => {
 		if (this.state.active && window.innerWidth <= 1024) {
 			this.setState({
 				BodyStyle: { backgroundColor: 'black', opacity: '0.1' },
@@ -56,7 +56,7 @@ class App extends React.Component {
 	}
 
 	// Add event listener for updateInactiveBodyStyle
-	componentDidMount() {
+	componentDidMount = () => {
 		this.updateInactiveBodyStyle();
 		window.addEventListener(
 			'resize',
@@ -65,7 +65,7 @@ class App extends React.Component {
 	}
 
 	// Remove event listener for updateInactiveBodyStyle
-	componentWillUnmount() {
+	componentWillUnmount = () => {
 		window.removeEventListener(
 			'resize',
 			this.updateInactiveBodyStyle.bind(this)
@@ -82,7 +82,7 @@ class App extends React.Component {
 					handleCloseMenu={this.handleCloseMenu}
 					active={active}
 				/>
-				<NavBar active={active} />
+				<NavBar active={active} handleCloseMenu={this.handleCloseMenu}/>
 				<div className="body" style={BodyStyle}>
 					<div className="fixed-header"/>
 					<Switch>

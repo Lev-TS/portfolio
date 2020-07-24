@@ -19,7 +19,6 @@ $yellow: #f1fa8c;
 	color: $text;
 	border-right: 1px $current-line solid;
 	flex-shrink: 0;
-	overflow: auto;
 	z-index: 1;
 	transition: all 0.7s ease-out;
 
@@ -28,7 +27,7 @@ $yellow: #f1fa8c;
 	align-items: center;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 700px) {
 	.nav-bar {
 		width: 230px;
 	}

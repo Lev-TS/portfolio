@@ -3,14 +3,14 @@ const PORTFOLIO_DATA = [
   {
     "id": 6,
     "title": "Portfolio",
-    "description": 'This project is the web site that you are currently visiting. This is my first challange that consists of multiple pages. Some of my key objectives were to make it responsive, practice the React Router Dom, and create a simple API that serves "Contact Me" page',
+    "description": 'This project is the multi-page web site that you are currently visiting. Some of my key objectives were to make it responsive, practice the React Router Dom, and create an API that serves "Contact Me" page',
     "image": "/project-images/portfolio.png",
     "stackType": "Fullstack",
-    "projectType": "Challange",
+    "projectType": "Personal",
     "postedAt": "Jul 2020",
-    "languages": ["JS"],
-    "tools": ["SCSS", "React", "Express", "API"],
-    "liveUrl": "n/a",
+    "languages": ["HTML", "JS"],
+    "tools": ["SCSS", "React", "Express", "API", "OAuth 2.0"],
+    "liveUrl": "https://levan-portfolio.herokuapp.com/",
     "sourceUrl": "https://github.com/Lev-TS/portfolio"
   },
   {
@@ -35,7 +35,7 @@ const PORTFOLIO_DATA = [
     "projectType": "Course Work",
     "postedAt": "Jun 2020",
     "languages": ["JS"],
-    "tools": ["Node", "Express", "CORS", "SQLite"],
+    "tools": ["Node", "Express", "API", "SQLite"],
     "liveUrl": "n/a",
     "sourceUrl": "https://github.com/Lev-TS/persistent-api"
   },
@@ -48,7 +48,7 @@ const PORTFOLIO_DATA = [
     "projectType": "Course Work",
     "postedAt": "Jun 2020",
     "languages": ["JS"],
-    "tools": ["Node", "Express", "CORS"],
+    "tools": ["Node", "Express", "API"],
     "liveUrl": "n/a",
     "sourceUrl": "https://github.com/Lev-TS/boss-machine"
   },

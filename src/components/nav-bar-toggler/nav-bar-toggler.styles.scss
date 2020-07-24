@@ -43,18 +43,18 @@ $yellow: #f1fa8c;
 		@include menu-icon();
 		background-image: url('../../assets/icon-remove.svg');
 		background-color: $darker-background;
-        left: 266px;
+        left: 279px;
         height: 15px;
 		width: 15px;
-		transition: transform 0.7s ease-out;
+		transition: all 0.7s ease-out;
 	}
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 700px) {
 	.nav-bar-toggler  {
 
 		.close-menu {
-			left: 199px;
+			left: 210px;
 		}
 	}
 }

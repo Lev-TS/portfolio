@@ -57,7 +57,7 @@ class Contact extends React.Component {
 		return (
 			<div className="contact">
 				<h1>Contact</h1>
-				<p>Would you like to work with me? <br></br> Awesome, lets talk!</p>
+				<p>Would you like to work with me? Awesome, let's talk!</p>
 				
 				
 				<ContactForm

@@ -21,13 +21,6 @@ $yellow: #f1fa8c;
 	margin: 1px 3px;
 }
 
-@mixin option-buttons-mobile {
-	font-size: 1.1rem;
-	letter-spacing: 1px;
-	padding: 7px 0;
-	margin: 1px 2px;
-}
-
 .options {
     width: 100%;
     min-height: 260px;
@@ -60,18 +53,3 @@ $yellow: #f1fa8c;
     }
 }
 
-@media only screen and (max-width: 800px) {
-	.nav-bar {
-
-		.options {
-
-			.selected-option {
-				@include option-buttons-mobile();
-			}
-
-			.option {
-				@include option-buttons-mobile();
-			}
-		}
-	}
-}
