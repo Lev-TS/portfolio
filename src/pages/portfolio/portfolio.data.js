@@ -9,7 +9,7 @@ const PORTFOLIO_DATA = [
     "projectType": "Personal",
     "postedAt": "Jul 2020",
     "languages": ["HTML", "JS"],
-    "tools": ["SCSS", "React", "Express", "API", "OAuth 2.0"],
+    "tools": ["SCSS", "React", "Router", "Express", "API", "OAuth 2.0"],
     "liveUrl": "https://levan-portfolio.herokuapp.com/",
     "sourceUrl": "https://github.com/Lev-TS/portfolio"
   },
