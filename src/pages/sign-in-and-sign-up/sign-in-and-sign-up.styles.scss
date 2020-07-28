@@ -1,0 +1,40 @@
+$darker-background: #1d2625;
+$background: #282a36;
+$current-line: #44475a;
+$foreground: #f8f8f2;
+$text: rgba(255, 255, 255, 0.6);
+$minor-text: #6272a4;
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+
+.sign-in-and-sign-up {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 3% 5%;
+
+    border: 1px $red solid;
+    border-radius: 2px;
+    background-color: $darker-background;
+    color: $text;
+    box-shadow: 0 0px 15px 5px $darker-background;
+
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: $foreground;
+    }
+    
+    span {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 50px;
+        line-height: 1.3;
+    }
+}

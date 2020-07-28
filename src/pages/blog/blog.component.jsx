@@ -3,8 +3,7 @@ import React from 'react';
 import './blog.styles.scss';
 
 import { auth } from '../../firebase/firebase.utils';
-import PageHeader from '../../components/page-header/page-header.component'
-import SignIn from '../../components/sign-in/sign-in.component'
+import PageHeader from '../../components/page-header/page-header.component';
 
 class Blog extends React.Component {
 	constructor() {
@@ -32,7 +31,6 @@ class Blog extends React.Component {
 		return (
 			<div className="blog">
 				<PageHeader title='Blog' currentUser={this.state.currentUser} isBlogPage/>
-				<SignIn />
 			</div>
 		)
 	}

@@ -35,7 +35,7 @@ const PageHeader = ({ title, currentUser, isBlogPage }) => (
 					SIGN OUT
 				</button>
 			) : (
-				<Link className="sign-in-button" to="/blog/signin">
+				<Link className="sign-in-button" to="/signin">
 					SIGN IN
 				</Link>
 			)}

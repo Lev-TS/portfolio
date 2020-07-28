@@ -13,6 +13,7 @@ import HomePage from './pages/homepage/homepage.component';
 import About from './pages/about/about.component';
 import Portfolio from './pages/portfolio/portfolio.component';
 import Blog from './pages/blog/blog.component';
+import SignInAndSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import Contact from './pages/contact/contact.component';
 
 class App extends React.Component {
@@ -99,6 +100,7 @@ class App extends React.Component {
 						<Route path="/about" component={About} />
 						<Route path="/portfolio" component={Portfolio} />
 						<Route path="/blog" component={Blog} />
+						<Route path="/signin" component={SignInAndSignUp} />
 						<Route path="/contact" component={Contact} />
 					</Switch>
 				</div>
