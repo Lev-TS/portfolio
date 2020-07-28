@@ -13,17 +13,14 @@ $red: #ff5555;
 $yellow: #f1fa8c;
 
 .blog {
-    height: 100%;
-    width: 100%;
+    width: 80%;
+    max-width: 1024px;
+    min-width: 325px;
+    margin: auto;
 
     display: flex;
-    align-items: center;
-    justify-self: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-
-    h1 {
-        font-size: 3rem;
-        color: $cyan;
-        margin: auto;
-    }
 }

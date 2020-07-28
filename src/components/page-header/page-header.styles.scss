@@ -13,9 +13,23 @@ $red: #ff5555;
 $yellow: #f1fa8c;
 
 @mixin icons {
+	height: 60px;
+	width: 60px;
+	margin-left: 5px;
+	flex-shrink: 0;
+	transition: background-image 0.3s linear;
 	background: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+@mixin signInOutButton {
+	border-radius: 4px;
+	margin-left: 5px;
+	color: $red;
+	background-color: $background;
+	font-size: 15px;
+	font-weight: 700;
 }
 
 .page-header {
@@ -25,9 +39,10 @@ $yellow: #f1fa8c;
 	margin-bottom: 50px;
 
 	display: flex;
+	align-items: center;
 
 	h1 {
-		width: 100%;
+		height: 60px;
 		color: $foreground;
 		vertical-align: middle;
 		line-height: 60px;
@@ -35,14 +50,6 @@ $yellow: #f1fa8c;
 		font-weight: 700;
 		text-transform: uppercase;
 		flex-grow: 1;
-	}
-
-	a {
-		width: 60px;
-		height: 60px;
-		margin-left: 5px;
-		flex-shrink: 0;
-		transition: all 0.3s linear;
 	}
 
 	.github {
@@ -71,21 +78,52 @@ $yellow: #f1fa8c;
 			background-image: url(../../assets/twitter-icon-hover.png);
 		}
 	}
+
+	.sign-out-button {
+		@include signInOutButton();
+		padding: 13px 22px;
+		border: 1px solid $red;
+		color: $red;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.sign-in-button {
+		@include signInOutButton();
+		padding: 12px 22px;
+		text-decoration: none;
+		border: 1px solid $green;
+		color: $green;
+	}
+	
 }
 
 @media only screen and (max-width: 1550px) {
 	.page-header {
 
-
         h1 {
-            font-size: 42px;
+			height: 40px;
+			font-size: 42px;
             line-height: 40px;
 		}
 
-		a {
+		.linkedin, .twitter, .github {
 			height: 40px;
             width: 40px;
 		}
+
+		.sign-out-button {
+			padding: 6.5px 13px;
+			font-size: 12px;
+		}
+	
+		.sign-in-button {
+			padding: 6.5px 13px;
+			font-size: 12px;
+		}
+
 	}
 }
 
@@ -93,13 +131,23 @@ $yellow: #f1fa8c;
 	.page-header {
 		
         h1 {
-            font-size: 25px;
+			height: 30px;
+			font-size: 30px;
             line-height: 30px;
 		}
 
-		a {
+		.linkedin, .twitter, .github {
 			height: 30px;
             width: 30px;
 		}
+
+		.sign-out-button {
+			padding: 4px 8px;
+		}
+	
+		.sign-in-button {
+			padding: 4px 8px;
+		}
 	}
+
 }

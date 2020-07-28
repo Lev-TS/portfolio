@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './page-header.styles.scss';
+import { auth } from '../../firebase/firebase.utils';
 
-const PageHeader = ({ title }) => (
+const PageHeader = ({ title, currentUser, isBlogPage }) => (
 	<div className="page-header">
         
         <h1>{title}</h1>
@@ -26,7 +28,18 @@ const PageHeader = ({ title }) => (
 			rel="noopener noreferrer"
 			target="_blank"
         >
-        </a>
+		</a>
+		<div style={{display: `${isBlogPage ? 'block' : 'none'}`}}>
+			{currentUser ? (
+				<button className="sign-out-button" onClick={() => auth.signOut()}>
+					SIGN OUT
+				</button>
+			) : (
+				<Link className="sign-in-button" to="/blog/signin">
+					SIGN IN
+				</Link>
+			)}
+		</div>
 	</div>
 );
 
