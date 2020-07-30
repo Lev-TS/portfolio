@@ -18,16 +18,15 @@ $yellow: #f1fa8c;
     line-height: 40px;
     padding: 0 29px;
     font-size: 12px;
-    border: 1px solid $red;
+    border: 1px solid $green;
     border-radius: 4px;
     background-color: $darker-background;
-    color: $red;
+    color: $green;
     text-transform: uppercase;
     font-weight: bolder;
     cursor: pointer;
   
     &:hover {
-      background-color: $darker-background;
       color: $red;
       border: 1px solid $red;
     }

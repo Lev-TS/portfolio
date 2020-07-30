@@ -15,7 +15,6 @@ class NavBarOptions extends React.Component {
 
 	render() {
 		const highlight = (path) =>`${this.props.location.pathname === `${path}` ? 'selected-option' : 'option'}`;
-		// const onClick = window.innerWidth <= 1024 && this.props.closeMenu
 
 		return (
 			<div className="options">
@@ -25,7 +24,7 @@ class NavBarOptions extends React.Component {
 						className={highlight(`${page.path}`)}
                         to={page.path}
 						style={{textTransform: 'uppercase'}}
-						onClick = {window.innerWidth <= 1024 && this.props.closeMenu}
+
                     >
                         {page.title}
                     </Link>

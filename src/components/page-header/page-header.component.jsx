@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './page-header.styles.scss';
+
 import { auth } from '../../firebase/firebase.utils';
 
 const PageHeader = ({ title, currentUser, isBlogPage }) => (
