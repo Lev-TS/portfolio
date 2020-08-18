@@ -13,24 +13,23 @@ const About = () => (
 			<p className="long-bio">
 				<span className="text-block">
 					Having researched the EU Innovation Policy in the role of a
-					public policy consultant (my initial career choice), I
-					decided that acquiring big data techniques was a natural
-					progression for me. I started learning Python and data
-					manipulation on DataCamp. However, soon I realised that I
-					have a passion for web development. So, I decided to shift
-					my career gradually towards the industry.
+					public policy consultant, I decided that acquiring big data
+					techniques was a natural progression for me. I started
+					learning Data Science on DataCamp. However, soon I realised
+					that I have a larger passion for Web Development. So, I
+					decided to move gradually towards this industry.
 				</span>
 
 				<span className="text-block">
 					I have since been working persistently towards this
-					objective. Recently, I finished an online programme on
-					Codecademy, which consisted of 16 full-stack courses.
-					Currently, I am involved in the online course by Zero to
-					Mastery Academy, where I am acquiring technologies for
-					building a full-scale e-commerce application. Some of the
-					key technologies that I focus there include, but are not
-					limited to: HTML5, SASS, JavaScript, React, Redux, Hooks,
-					GraphQL, ContextAPI, Stripe, and Firebase.
+					objective. Recently, I have finished an online web
+					development programme on Codecademy, which consisted of 16
+					full-stack courses. Currently, I am enrolled in an online
+					learning programme, where I am acquiring skills for building
+					a full-scale e-commerce application. Some of the key
+					technologies that I focus include, but are not limited to:
+					SASS, React, Redux, Hooks, GraphQL, ContextAPI, Stripe, and
+					Firebase.
 				</span>
 			</p>
 		</div>

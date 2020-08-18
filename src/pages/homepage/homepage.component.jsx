@@ -15,7 +15,7 @@ const HomePage = ({ history, onLearnMore }) => {
 				Hi, I am <span className="my-name">Levan</span>
 			</h1>
 			<p>
-				I am a web developer. I create responsive and interactive
+				I am a JavaScript developer. I create responsive and interactive
 				web applications by writing clean and scalable code.
 			</p>
 			<button className="learn-more" onClick={handleLearnMore}>Learn More</button>
