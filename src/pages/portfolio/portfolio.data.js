@@ -1,14 +1,27 @@
 const PORTFOLIO_DATA = [
   
   {
+    "id": 8,
+    "title": "Currnecy Converter",
+    "description": 'The project uses REST services provided by the Bank of Lithuania for currency exchange rates. Rates are stored in the sqlite database. User activity is also logged in this database. The client communicates with the database via backend services. The test suit is made at the Modul and Server levels using Mocha.',
+    "image": "/project-images/currency-converter.png",
+    "stackType": "Fullstack",
+    "projectType": "Challange",
+    "postedAt": "Aug 2020",
+    "languages": ["JS"],
+    "tools": ["SCSS", "React", "Express", "API", "SQLite", "Mocha", "Chai"],
+    "liveUrl": "https://euro-rates.herokuapp.com/",
+    "sourceUrl": "https://github.com/Lev-TS/currency-convertor"
+  },
+  {
     "id": 7,
     "title": "Portfolio",
     "description": 'This project is the multi-page web site that you are currently visiting. Some of my key objectives were to make it responsive, practice the React Router Dom, and create an API that serves "Contact Me" page',
     "image": "/project-images/portfolio.png",
     "stackType": "Fullstack",
-    "projectType": "Personal",
+    "projectType": "Challange",
     "postedAt": "Jul 2020",
-    "languages": ["HTML", "JS"],
+    "languages": ["JS"],
     "tools": ["SCSS", "React", "Router", "Express", "API", "OAuth 2.0"],
     "liveUrl": "https://levan-portfolio.herokuapp.com/",
     "sourceUrl": "https://github.com/Lev-TS/portfolio"
