@@ -4,14 +4,14 @@ const PORTFOLIO_DATA = [
     "id": 9,
     "title": "Authentication",
     "description": 'This is a basic serverless application which authenticates users. New users are able to create accounts, whilest existing ones are able to sign in. Besides, it alerts users in case of errors, e.g. if a passward is too weak or an email was already used to create an account, an user will recieve corresponding alerts.',
-    "image": "/project-images/currency-converter.png",
+    "image": "/project-images/firebase-auth.png",
     "stackType": "Fullstack",
     "projectType": "Challange",
     "postedAt": "Aug 2020",
     "languages": ["JS"],
     "tools": ["SCSS", "React", "Router", "Firebase", "OAuth 2.0"],
-    "liveUrl": "https://euro-rates.herokuapp.com/",
-    "sourceUrl": "https://github.com/Lev-TS/currency-convertor"
+    "liveUrl": "https://lev-ts.github.io/firebase-authentication/",
+    "sourceUrl": "https://github.com/Lev-TS/firebase-authentication"
   },
   {
     "id": 8,
