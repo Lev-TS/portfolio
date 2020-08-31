@@ -1,6 +1,19 @@
 const PORTFOLIO_DATA = [
   
   {
+    "id": 9,
+    "title": "Authentication",
+    "description": 'This is a basic serverless application which authenticates users. New users are able to create accounts, whilest existing ones are able to sign in. Besides, it alerts users in case of errors, e.g. if a passward is too weak or an email was already used to create an account, an user will recieve corresponding alerts.',
+    "image": "/project-images/currency-converter.png",
+    "stackType": "Fullstack",
+    "projectType": "Challange",
+    "postedAt": "Aug 2020",
+    "languages": ["JS"],
+    "tools": ["SCSS", "React", "Router", "Firebase", "OAuth 2.0"],
+    "liveUrl": "https://euro-rates.herokuapp.com/",
+    "sourceUrl": "https://github.com/Lev-TS/currency-convertor"
+  },
+  {
     "id": 8,
     "title": "Currnecy Converter",
     "description": 'The project uses REST services provided by the Bank of Lithuania for currency exchange rates. Rates are stored in the sqlite database. User activity is also logged in this database. The client communicates with the database via backend services. The test suit is made at the Modul and Server levels using Mocha.',
